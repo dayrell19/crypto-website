@@ -3,10 +3,14 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "./Main.css";
 import Coin from "./Coin.js";
+import { useHistory } from "react-router-dom";
 
 function Main() {
   const [cryptoList, setCryptoList] = useState([]);
   const [coinSearch, setCoinSearch] = useState("");
+
+  let history = useHistory();
+
   useEffect(() => {
     Axios.get(
       "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&sparkline=false"
@@ -15,6 +19,11 @@ function Main() {
       console.log(response.data);
     });
   }, []);
+
+  const goToPage = () => {
+    history.push(`/CoinPage/${coinSearch}`);
+    console.log(coinSearch);
+  };
 
   return (
     <div className="mainBackground">
@@ -27,7 +36,7 @@ function Main() {
         onChange={(event) => {
           setCoinSearch(event.target.value);
         }}
-        onKeyDown={(event) => event.key === "Enter" && console.log("Funfou")}
+        onKeyDown={(event) => event.key === "Enter" && goToPage()}
       />
       {cryptoList.map((value, key) => {
         return (

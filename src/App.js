@@ -8,6 +8,7 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" exact component={Main} />
+        <Route path="/CoinPage/:id" exact component={CoinPage} />
         <Route path="*" exact component={PageNotFound} />
       </Switch>
     </Router>

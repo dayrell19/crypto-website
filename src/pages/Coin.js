@@ -35,7 +35,7 @@ function Coin({
       <button
         className="coinButton"
         onClick={() => {
-          history.push("/{id}");
+          history.push(`/CoinPage/${id}`);
         }}
       >
         +
