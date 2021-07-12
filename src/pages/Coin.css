@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.coinContainer {
+  display: flex;
+  flex-direction: row;
+  justify-items: start;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid #d7d7d7;
+  width: 900px;
+  font-family: "Encode Sans SC", sans-serif;
+  color: white;
+}
+
+.coinRank {
+  width: 60px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.coinImage {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.coinTitle {
+  font-size: 16px;
+  width: 150px;
+}
+
+.coinSymbol {
+  text-transform: uppercase;
+  width: 110px;
+}
+
+.coinPrice {
+  width: 150px;
+}
+
+.coinPercentage {
+  width: 155px;
+}
+
+.coinPriceVariation {
+  width: 110px;
+  margin-right: 25px;
+}
+
+#redPercentage {
+  color: #f00606;
+}
+
+#redPrice {
+  color: #f00606;
+}
+
+#greenPercentage {
+  color: #11d811;
+}
+
+#greenPrice {
+  color: #11d811;
+}
+
+.coinButton {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 20px;
+}
